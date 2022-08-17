@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import DisplayDatas from "./components/DisplayDatas";
+import Paginations from "./components/Paginations";
+import Search from "./components/Search";
+import "./components/mystyle.css";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container Border">
+        {/* <p>The data we got from context is :- </p> */}
+        <Search />
+        <Paginations />
+        <DisplayDatas />
+      </div>
+    </>
   );
-}
+};
 
 export default App;
